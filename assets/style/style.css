@@ -1,0 +1,618 @@
+:root{
+
+  /* ****************** COlOR ****************** */
+
+  /* Primary Colors */
+
+  --White: hsl(0, 0%, 100%);
+  --black: hsl(212, 27%, 19%);
+  --Soft-red: hsl(7, 99%, 70%);
+  --Yellow: hsl(51, 100%, 49%);
+  --design-text: hsl(167, 40%, 24%);
+  --photography-text: hsl(198, 62%, 26%);
+  --footer--Dark: hsl(168, 74%, 16%);
+  --footer-light: hsl(168, 53%, 49%);
+  
+
+
+  /* Neutral */
+
+  --grayish-blue: hsl(213, 9%, 39%);
+  --Dark-grayish-blue: hsl(232, 10%, 55%);
+  --Grayish-blue: hsl(210, 4%, 67%);
+}
+
+
+
+/* ****************** BASE ****************** */
+
+html{
+  box-sizing: border-box;
+}
+
+*, *::before, *::after{
+  box-sizing: inherit;
+}
+
+
+/* ****************** BODY ****************** */
+
+html{
+  scroll-behavior: smooth;
+}
+
+body, h1 , h2, h3, h4, h5, h6, p, ol, ul,a{
+ margin: 0;
+ padding: 0;
+ font-weight: normal;
+}
+
+ol,ul{
+ list-style: none;
+}
+
+
+a{
+  text-decoration: none;
+}
+
+body{
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+img{
+ max-width: 100%;
+ height: auto;
+}
+
+/* ****************** TYPOGRAPHY ****************** */
+  
+@font-face{
+  font-family: Barlow;
+  src: url("/assets/vendor/font/Barlow-Regular.ttf");
+}
+
+@font-face{
+  font-family: Fraunces;
+  src: url("/assets/vendor/font/Fraunces/Fraunces/Fraunces.ttf");
+}
+
+
+/* ****************** Start Styling Header Section ****************** */
+
+nav{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.logo{
+  margin: 1rem 1rem;
+}
+.navBar{
+  display: flex;
+}
+.navItems{
+  margin: 1rem 1rem;
+}
+
+
+.navLink{
+  font-family: Barlow;
+  font-weight: bold;
+  color: var(--White);
+  padding: .60rem 1rem;
+  border-radius: 1.20rem;
+  transition: background .5s;
+  font-family: Barlow;
+  font-weight: 600;
+}
+
+.navLink:hover{
+  background: #50d2f3;
+  color: var(--White);
+}
+
+.click{
+  background: var(--White);
+  color: var(--black);
+  padding: .60rem 1rem;
+  border-radius: 1.20rem;
+  text-transform: uppercase;
+}
+
+.hamburger{
+  margin: 1rem 1rem;
+  display: none;
+  cursor: pointer;
+  text-align: right;
+  font-size: 2rem;
+  padding: .50rem 1.45rem;
+}
+
+
+/* ****************** Making NavBar Responsive ****************** */
+
+@media (max-width:740px){
+
+  .logo{
+    margin: 3rem 3rem;
+  }
+  .hamburger{
+    display: block;
+  }
+
+  .navBar{
+    display: none;
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    position: absolute;
+    top: 9rem;
+    left: 10rem;
+    background: var(--White);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .navBar::after{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    top: -1.50rem;
+    right: -1.50rem;
+    border-left: 3rem solid transparent;
+    border-right: 3rem solid transparent;
+    border-bottom: 3rem solid var(--White);
+    transform: rotate(270deg);
+  }
+
+  .navBar .navItems .navLink{
+    color: var(--grayish-blue);
+  }
+
+  .click{
+    background: var(--Yellow);
+    color: var(--black);
+  }
+
+  /* jQuery active Class */
+  .active{
+    display: block;
+  }
+}
+
+@media (max-width:600px){
+  .navBar{
+    top: 8rem;
+    left: 6rem;
+    
+  }
+  .hamburger{
+    position: relative;
+    left: -4rem;
+  }
+}
+@media (max-width:550px){
+
+  .navBar{
+    left: 4.55rem;
+  }
+  
+
+  .hamburger{
+    position: relative;
+    left: .2rem;
+  }
+}
+
+@media (max-width:475px){
+ .navBar{
+   max-width: 350px;
+   left: 4rem;
+ } 
+ .hamburger{
+   left: -1rem;
+ }
+}
+@media (max-width:415px){
+  .navBar{
+    max-width: 320px;
+    left: 3rem;
+  } 
+  .hamburger{
+    left: -.45rem;
+  }
+ }
+
+ @media (max-width:400px){
+  .navBar{
+    max-width: 310px;
+    left: 2.45rem;
+  } 
+  .hamburger{
+    left: -.12rem;
+  }
+ }
+
+
+@media (max-width:375px){
+  .navBar{
+    max-width: 290px;
+  }
+
+  .hamburger{
+    left: -.5rem;
+  }
+}
+/* ****************** End Making NavBar Responsive ****************** */
+
+/* ****************** End Styling Header Section ****************** */
+
+
+
+
+/* ****************** Start Styling Home Section ****************** */
+.home{
+background: url("/assets/img/desktop/header.jpg") no-repeat center center;
+background-size: cover;
+width: 100%;
+height: 39.40rem;
+}
+
+.homeContents{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title{
+  margin-top: 8rem;
+  color: var(--White);
+  font-family: Fraunces;
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: .80rem;
+  text-align: center;
+}
+
+.downArrow{
+  margin-top: 5rem;
+}
+
+/* ****************** End Styling Home Section ****************** */
+
+
+
+/* ****************** Start Styling About Section ****************** */
+
+.about{
+  width: 100%;
+  min-height: 100vh;
+}
+
+.row{
+  width: 100%;
+  display: flex;
+}
+.col1{
+  flex: 0 0 50%;
+  padding: 1rem 5vw;
+  align-self: center;
+}
+
+.abtContent{
+  font-weight: 900;
+  font-family: Fraunces;
+}
+.abtpara{
+  margin: 2rem 0  2rem 0;
+  font-family: Barlow;
+  color: var(--grayish-blue);
+}
+
+.btn-1{
+  color: var(--black);
+  font-weight: 900;
+  text-decoration: 5px  underline solid var(--Yellow);
+}
+
+.col2{
+  flex: 0 0 50%;
+}
+
+.rowRev{
+  flex-direction: row-reverse;
+  margin-top: -.45rem;
+}
+
+.btn-2{
+  color: var(--black);
+  font-weight: 900;
+  text-decoration: 5px  underline solid var(--Soft-red); 
+}
+
+
+.row-2{
+  display: flex;
+  margin-top: -6.5px;
+}
+
+.col-1{
+  flex: 0 0 50%;
+}
+
+.contents{
+  margin-top: -14rem;
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.heading-1{
+  font-size: 1.45rem;
+  font-family: Fraunces;
+  font-weight: 900;
+  color: var(--design-text);
+}
+
+.details-1{
+  font-family: Barlow;
+  font-weight: 500;
+  color: var(--design-text);
+  margin-top: 2rem;
+  padding: 0 5rem;
+}
+
+.heading-2{
+  font-size: 1.45rem;
+  font-family: Fraunces;
+  font-weight: 900;
+  color: var(--photography-text);
+}
+
+.details-2{
+  font-family: Barlow;
+  font-weight: 500;
+  color: var(--photography-text);
+  margin-top: 2rem;
+  padding: 0 5rem;
+}
+
+/* ****************** Making About Section Responsive ****************** */
+
+@media (max-width: 900px) {
+  .row{
+    flex-direction: column-reverse;
+  }
+  .col1{
+    text-align: center;
+    padding: 6rem 4rem;
+  }
+  .row-2{
+    flex-direction: column;
+  }
+  .eggLogo{
+    width: 900px;
+  } 
+  .standOut{
+    width: 900px;
+  }
+  .cherry{
+    width: 900px;
+    height: 100%;
+  }
+  .orange{
+    width: 900px;
+  }
+  .contents{
+    margin-top: -14rem;
+  }
+}
+
+@media (max-width:450px) {
+  .contents{
+    font-size: .90rem;
+  }
+
+}
+
+
+/* ****************** End  About Section Responsive ****************** */
+
+
+/* ****************** End Styling About Section ****************** */
+
+
+
+
+/* ****************** Start Styling Testimonials -/- Services Secion ****************** */
+
+
+.clientTestimonials{
+  width: 100%;
+  min-height: 100vh;
+}
+.testimonialsHeading{
+  margin-top: 10rem;
+  display: flex;
+  justify-content: center;
+  color: var(--Dark-grayish-blue);
+}
+.testimonialsHeading h3{
+  font-family: Fraunces;
+  font-weight: 600;
+  letter-spacing: 5px;
+}
+
+.testimonials{
+  min-height: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.clients{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 1.10rem;
+}
+
+.clientsImg img{
+  border-radius: 50%;
+}
+
+.clientsDetails p{
+  text-align: center;
+  font-family: Barlow;
+  font-size: 1rem;
+  margin-top: 3rem;
+}
+
+.clientsDesc{
+  margin: 3rem 0 3rem 0;
+  text-align: center;
+}
+
+.name{
+  font-family: Fraunces;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.profession{
+  color: var(--grayish-blue);
+}
+
+
+/* ****************** Making Clients/testimonails Section Responsive ****************** */
+@media (max-width: 1308px){
+  
+  .testimonialsHeading h3{
+    position: relative;
+    margin-top: 1rem;
+  }
+  .testimonials{
+    margin-top: 5rem;
+  }
+}
+@media(max-width: 472px){
+  .testimonialsHeading h3{
+    margin-top: -6rem;
+  }
+  .testimonials{
+    margin-top: -1rem;
+  }
+}
+
+/* ****************** End Clients/testimonails Section Responsive ****************** */
+
+
+
+/* ****************** End Styling Testimonials -/- Services Secion ****************** */
+
+
+
+
+
+/* ****************** Start Styling Project Gallery Sectop Secion ****************** */
+
+.projectGallery{
+  width: 100%;
+  display: flex;
+}
+
+/* ****************** Making Project Responsive ****************** */
+
+@media (max-width:770px) {
+  .projectGallery{
+    flex-wrap: wrap;
+  }
+  .galleryRowImg:nth-child(1){
+  flex: 0 0 50%;
+  }
+  .galleryRowImg:nth-child(2){
+    flex: 0 0 50%;
+    }
+  .galleryRowImg:nth-child(3){
+    flex: 0 0 50%;
+    margin-top: -.35rem;
+  }
+  .galleryRowImg:nth-child(4){
+    flex: 0 0 50%;
+    margin-top: -.35rem;
+  }
+}
+
+
+
+/* ****************** End Making Project Responsive ****************** */
+
+/* ****************** End Styling Project Gallery Sectop Secion ****************** */
+
+
+
+/* ****************** Start Styling Footer ****************** */
+
+footer{
+  margin-top: -.38rem;
+  background: var(--footer-light);
+  width: 100%;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.footerTitle h2{
+  color: var(--footer--Dark);
+  font-family: Barlow;
+  font-weight: 900;
+}
+
+.footerLinks ul{
+  display: flex;
+}
+
+.footerLinks ul li{
+  margin: 0 2rem;
+}
+
+.footerLinks ul li  a{
+  color: var(--footer--Dark);
+}
+
+.footerLinks ul li  a:hover{
+  color: var(--White);
+}
+
+.footerLogo ul{
+  display: flex;
+}
+
+.footerLogo ul li{
+  display: flex;
+  margin: 0 1rem;
+}
+
+.footerLogo ul li img{
+  cursor: pointer;
+  width: 25px;
+}
+
+
+/* ****************** End Styling Footer ****************** */
